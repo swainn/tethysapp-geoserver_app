@@ -1,3 +1,11 @@
-*.idea
-*.pyc
+*.pydevproject
+*.project
 *.egg-info
+*.class
+*.pyo
+*.pyc
+*.db
+*.sqlite
+*.DS_Store
+.idea/
+services.yml

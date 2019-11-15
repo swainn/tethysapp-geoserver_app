@@ -2,7 +2,7 @@ import random
 import string
 
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from tethys_sdk.permissions import login_required
 
 from tethys_sdk.gizmos import *
 from .app import GeoserverApp as app
@@ -12,7 +12,7 @@ WORKSPACE = 'geoserver_app'
 GEOSERVER_URI = 'http://www.example.com/geoserver-app'
 
 
-@login_required
+@login_required()
 def home(request):
     """
     Controller for the app home page.
@@ -50,7 +50,7 @@ def home(request):
     return render(request, 'geoserver_app/home.html', context)
 
 
-@login_required
+@login_required()
 def map(request):
     """
     Controller for the map page
@@ -116,7 +116,7 @@ def map(request):
     return render(request, 'geoserver_app/map.html', context)
 
 
-@login_required
+@login_required()
 def draw(request):
     drawing_options = MVDraw(
         controls=['Modify', 'Move', 'Point', 'LineString', 'Polygon', 'Box'],

@@ -12,7 +12,7 @@ class GeoserverApp(TethysAppBase):
     icon = 'geoserver_app/images/icon.gif'
     package = 'geoserver_app'
     root_url = 'geoserver-app'
-    color = '#e74c3c'
+    color = '#d35400'
     description = ''
     tags = ''
     enable_feedback = False
